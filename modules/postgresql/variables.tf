@@ -30,3 +30,7 @@ variable "db_collation" {
   type        = string
   default     = ""
 }
+
+
+variable "project" {}
+ 
