@@ -2,6 +2,6 @@
 
 module "postgresql" {
      source            = "./modules/postgresql"
-     project           = "${var.project}"
+     #project           = "${var.project}"
 }
 
