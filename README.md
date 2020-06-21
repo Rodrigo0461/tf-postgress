@@ -48,7 +48,7 @@ terraform plan var="env=qa" var="project=name-your-project"
 terraform apply var="env=qa" var="project=name-your-project"
 ```
 
-## TF Destroy
+## TF destroy
 
 ```shell
 terraform Destroy var="env=qa" var="project=name-your-project"
