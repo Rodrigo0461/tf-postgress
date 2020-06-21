@@ -1,7 +1,7 @@
 ##### MODULE POSTGRES #####
 
 resource "google_sql_database_instance" "master" {
-  name             = "master-instance"
+  name             = "${var.db_name["${var.env}"]}"
   database_version = "POSTGRES_11"
   region           = "us-central1"
   project          = "${var.project}"
@@ -9,6 +9,6 @@ resource "google_sql_database_instance" "master" {
   settings {
     # Second-generation instance tiers are based on the machine
     # type. See argument reference below.
-    tier = "db-f1-micro"
+    tier = "${var.tier["${var.env}"]}"
   }
 }

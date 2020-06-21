@@ -6,8 +6,10 @@ variable "region" {
 
 variable "tier" {
   description = "The tier for the master instance."
-  type        = string
-  default     = "db-f1-micro"
+  default     = {
+    "qa"   ="db-f1-micro"
+    "prod" ="db-n1-standard-1"
+  }
 }
 
 
@@ -15,8 +17,10 @@ variable "tier" {
 ### var db ####
 variable "db_name" {
   description = "The name of the default database to create"
-  type        = string
-  default     = "default"
+  default     = {
+    "qa"   = "qa-instance"
+    "prod" = "master-instance"
+  }
 }
 
 variable "db_charset" {
@@ -33,4 +37,6 @@ variable "db_collation" {
 
 
 variable "project" {}
+
+variable "env" {}
  
